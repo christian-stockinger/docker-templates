@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Grafana</Name>
+  <Repository>grafana/grafana</Repository>
+  <Registry>https://hub.docker.com/r/grafana/grafana/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://lime-technology.com/forum/index.php?topic=51498.0</Support>
+  <Project>http://grafana.org/</Project>
+  <Overview>
+    Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, Elasticsearch, OpenTSDB, Prometheus and InfluxDB.
+  </Overview>
+  <Category>Network:Management Tools:</Category>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/atribe/unRAID-docker/master/grafana.xml</TemplateURL>
+  <Icon>https://github.com/atribe/unRAID-docker/raw/master/icons/grafana.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1590327709</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Grafana is an open source, feature rich metrics dashboard and graph editor for Graphite, Elasticsearch, OpenTSDB, Prometheus and InfluxDB.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3000</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/grafana</HostDir>
+      <ContainerDir>/var/lib/grafana</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>http://[IP]:[PORT:3000]/</Value>
+      <Name>GF_SERVER_ROOT_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>password</Value>
+      <Name>GF_SECURITY_ADMIN_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Host Port 1" Target="3000" Default="3000" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="Host Path 1" Target="/var/lib/grafana" Default="/mnt/user/appdata/grafana" Mode="rw" Description="Container Path: /var/lib/grafana" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/grafana</Config>
+  <Config Name="Key 1" Target="GF_SERVER_ROOT_URL" Default="http://your.server.ip.or.hostname" Mode="" Description="Container Variable: GF_SERVER_ROOT_URL" Type="Variable" Display="always" Required="false" Mask="false">http://[IP]:[PORT:3000]/</Config>
+  <Config Name="Key 2" Target="GF_SECURITY_ADMIN_PASSWORD" Default="admin" Mode="" Description="Container Variable: GF_SECURITY_ADMIN_PASSWORD" Type="Variable" Display="always" Required="true" Mask="true">password</Config>
+</Container>

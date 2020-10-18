@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>octoprint</Name>
+  <Repository>registry.gitlab.com/skydra/octoprint-nas:02eea3118fe8154712a571e86e96a1c15ff4bb5f</Repository>
+  <Registry>https://hub.docker.com/r/octoprint/octoprint/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/octoprint/octoprint/</Support>
+  <Project/>
+  <Overview>OctoPrint is the snappy web interface for your 3D printer!   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
+  <Category/>
+  <WebUI>http://[IP]:[PORT:5000]</WebUI>
+  <TemplateURL/>
+  <Icon>https://octoprint.org/assets/img/logo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1601207927</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>OctoPrint is the snappy web interface for your 3D printer!   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5050</HostPort>
+        <ContainerPort>5000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/OctoPrint/</HostDir>
+      <ContainerDir>/home/octoprint/.octoprint</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Port 1" Target="5000" Default="" Mode="tcp" Description="Container Port: 5000" Type="Port" Display="always" Required="false" Mask="false">5050</Config>
+  <Config Name="Printer" Target="" Default="" Mode="" Description="Printer Device&#13;&#10;" Type="Device" Display="always" Required="false" Mask="false">/dev/ttyUSB0:/dev/ttyUSB0</Config>
+  <Config Name="Data" Target="/home/octoprint/.octoprint" Default="" Mode="rw" Description="Container Path: /home/octoprint/.octoprint" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/OctoPrint/</Config>
+</Container>

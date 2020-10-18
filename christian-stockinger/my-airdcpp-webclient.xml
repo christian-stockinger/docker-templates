@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>airdcpp-webclient</Name>
+  <Repository>gangefors/airdcpp-webclient</Repository>
+  <Registry>https://hub.docker.com/r/gangefors/airdcpp-webclient/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/gangefors/airdcpp-webclient/</Support>
+  <Project/>
+  <Overview>AirDC++ Web Client Docker image   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>/plugins/dynamix.docker.manager/images/question.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1574357814</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>AirDC++ Web Client Docker image   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>5600</HostPort>
+        <ContainerPort>5600</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5601</HostPort>
+        <ContainerPort>5601</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>21248</HostPort>
+        <ContainerPort>21248</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>21248</HostPort>
+        <ContainerPort>21248</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>21249</HostPort>
+        <ContainerPort>21249</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/Media/</HostDir>
+      <ContainerDir>/Share</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/NAS/Download/</HostDir>
+      <ContainerDir>/Downloads</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Port 1" Target="5600" Default="" Mode="tcp" Description="Container Port: 5600" Type="Port" Display="always" Required="false" Mask="false">5600</Config>
+  <Config Name="Host Port 2" Target="5601" Default="" Mode="tcp" Description="Container Port: 5601" Type="Port" Display="always" Required="false" Mask="false">5601</Config>
+  <Config Name="Host Port 3" Target="21248" Default="" Mode="tcp" Description="Container Port: 21248" Type="Port" Display="always" Required="false" Mask="false">21248</Config>
+  <Config Name="Host Port 4" Target="21248" Default="" Mode="udp" Description="Container Port: 21248" Type="Port" Display="always" Required="false" Mask="false">21248</Config>
+  <Config Name="Host Port 5" Target="21249" Default="" Mode="tcp" Description="Container Port: 21249" Type="Port" Display="always" Required="false" Mask="false">21249</Config>
+  <Config Name="Host Path 1" Target="/Share" Default="" Mode="rw" Description="Container Path: /Share" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Media/</Config>
+  <Config Name="Host Path 2" Target="/Downloads" Default="" Mode="rw" Description="Container Path: /Downloads" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/NAS/Download/</Config>
+</Container>

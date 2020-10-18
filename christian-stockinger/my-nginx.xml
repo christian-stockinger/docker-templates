@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>nginx</Name>
+  <Repository>nginx:alpine</Repository>
+  <Registry>https://hub.docker.com/_/nginx</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://img.icons8.com/color/48/000000/nginx.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1588433470</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nginx/</HostDir>
+      <ContainerDir>/etc/nginx/conf.d</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="config_dir" Target="/etc/nginx/conf.d" Default="" Mode="rw" Description="Container Path: /etc/nginx/conf.d" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nginx/</Config>
+  <Config Name="HTTP" Target="80" Default="" Mode="tcp" Description="nexus x-forwarded port" Type="Port" Display="always" Required="false" Mask="false">80</Config>
+</Container>

@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>gitla-runner-cleanup</Name>
+  <Repository>quay.io/gitlab/gitlab-runner-docker-cleanup</Repository>
+  <Registry>https://gitlab.com/gitlab-org/gitlab-runner-docker-cleanup</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Broom_icon.svg/200px-Broom_icon.svg.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1593624640</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>10G</Value>
+      <Name>LOW_FREE_SPACE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>10G</Value>
+      <Name>EXPECTED_FREE_SPACE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>5h</Value>
+      <Name>CHECK_INTERVAL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>4h</Value>
+      <Name>RETRY_INTERVAL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>1</Value>
+      <Name>USE_DF</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="LOW_FREE_SPACE" Target="LOW_FREE_SPACE" Default="" Mode="" Description="Container Variable: LOW_FREE_SPACE" Type="Variable" Display="always" Required="false" Mask="false">10G</Config>
+  <Config Name="EXPECTED_FREE_SPACE" Target="EXPECTED_FREE_SPACE" Default="" Mode="" Description="Container Variable: EXPECTED_FREE_SPACE" Type="Variable" Display="always" Required="false" Mask="false">10G</Config>
+  <Config Name="CHECK_INTERVAL" Target="CHECK_INTERVAL" Default="" Mode="" Description="Container Variable: CHECK_INTERVAL" Type="Variable" Display="always" Required="false" Mask="false">5h</Config>
+  <Config Name="RETRY_INTERVAL" Target="RETRY_INTERVAL" Default="" Mode="" Description="Container Variable: RETRY_INTERVAL" Type="Variable" Display="always" Required="false" Mask="false">4h</Config>
+  <Config Name="USE_DF" Target="USE_DF" Default="" Mode="" Description="Container Variable: USE_DF" Type="Variable" Display="always" Required="false" Mask="false">1</Config>
+  <Config Name="Docker" Target="/var/run/docker.sock" Default="" Mode="rw" Description="Container Path: /var/run/docker.sock" Type="Path" Display="advanced-hide" Required="true" Mask="false">/var/run/docker.sock</Config>
+</Container>

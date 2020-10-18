@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>nextcloud</Name>
+  <Repository>nextcloud</Repository>
+  <Registry>https://hub.docker.com/_/nextcloud/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project/>
+  <Overview/>
+  <Category/>
+  <WebUI>http://cloud.christian-stockinger.de/</WebUI>
+  <TemplateURL/>
+  <Icon>https://cdn.icon-icons.com/icons2/1381/PNG/512/nextcloud_94374.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1587487733</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description/>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8081</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nextcloud/</HostDir>
+      <ContainerDir>/var/www/html/config</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/Cloud/</HostDir>
+      <ContainerDir>/var/www/html/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="config" Target="/var/www/html/config" Default="" Mode="rw" Description="Container Path: /var/www/html/config" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nextcloud/</Config>
+  <Config Name="Data" Target="/var/www/html/data" Default="" Mode="rw" Description="Container Path: /var/www/html/data" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Cloud/</Config>
+  <Config Name="HTTP" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">8081</Config>
+</Container>
